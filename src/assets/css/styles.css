@@ -7,21 +7,19 @@ body {
   background-color: #FB6B6B;
 }
 
-.root {
-  width: 100vw;
-  height: 100vh;
+.conteudo, .primeiraTela {
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
+
+}
+.primeiraTela {
+  width: 100vw;
+  height: 100vh;  
 }
 
-.conteudo {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center; 
-}
+/* ------------------------------------ PRIMEIRA TELA */
 
 h1 { /* titulo ZapRecall */
   font-family: 'Righteous', cursive;
@@ -48,3 +46,26 @@ h1 { /* titulo ZapRecall */
   color: #D70900;
 }
 
+/* ------------------------------------ TELA FLASHCARDS */
+.telaFlashcards {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+.cabecalho {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 245px;
+  margin: 40px 0;
+}
+
+.cabecalho h1 {
+  margin: 0;
+}
+
+.logo {
+  height: 60px;
+}

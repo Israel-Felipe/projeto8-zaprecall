@@ -1,11 +1,14 @@
 import React from "react";
-import logo from "../assets/images/logo.svg"
+import PrimeiraTela from "./PrimeiraTela";
+import TelaFlashcards from "./TelaFlashcards";
+
+
 export default function App() {
+const [iniciar, setIniciar] = React.useState(true);
+
     return (
-      <div className="conteudo">
-        <img className="logo" src={logo} />
-          <h1>ZapRecall</h1>
-        <button className="botaoiniciar"> Iniciar Recall! </button>
-      </div>
+      <>
+      {iniciar ? <PrimeiraTela iniciar={iniciar} setIniciar={setIniciar}/> : <TelaFlashcards />}
+      </>
     )
 }
