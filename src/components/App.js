@@ -4,6 +4,7 @@ import TelaFlashcards from "./TelaFlashcards";
 
 
 export default function App() {
+  
 const [iniciar, setIniciar] = React.useState(true);
 
     return (
