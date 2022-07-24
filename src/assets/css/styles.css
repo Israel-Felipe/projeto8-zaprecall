@@ -140,15 +140,15 @@ h1 { /* titulo ZapRecall */
   background-color: #2FBE34;
 }
 
-.textoVermelho {
+.vermelho {
   color: #FF3030;
   text-decoration: line-through;
 }
-.textoLaranja {
+.laranja {
   color: #FF922E;
   text-decoration: line-through;
 }
-.textoVerde {
+.verde {
   color: #2FBE34;
   text-decoration: line-through;
 }
@@ -171,3 +171,8 @@ ion-icon {
 .footer p {
   font-size: 18px;
 }
+
+.sequenciaCheck {
+  display: flex;
+}
+
