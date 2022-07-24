@@ -13,6 +13,12 @@ export default function TelaFlashcards() {
 
                 <div className="cards">
                     <Flashcard />
+                    <Flashcard />
+                    <Flashcard />
+                    <Flashcard />
+                    <Flashcard />
+                    <Flashcard />
+                    <Flashcard />
                 </div>
         </div>
     )

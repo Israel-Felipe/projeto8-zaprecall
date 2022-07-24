@@ -11,7 +11,7 @@ export default function Flashcard () {
         return (
             <div className="cardFechado">
                 <p>Pergunta 1</p>
-                <ion-icon name="play-outline" onClick={() => setContador(contador + 1)}></ion-icon>
+                <ion-icon name="play-outline" onClick={()=>setContador(contador+1)}></ion-icon>
             </div>
         )
     } 
@@ -19,8 +19,8 @@ export default function Flashcard () {
     else if (contador === 1) {
         return (
             <div className="cardAberto">
-                <p>Perguntinha bem legal</p>
-                <img className="turn" src={turn} onClick={() => setContador(contador + 1)}/>
+                <p>O que é JSX?</p>
+                <img className="turn" src={turn} onClick={()=>setContador(contador+1)}/>
             </div>
         )
     } 
@@ -28,11 +28,11 @@ export default function Flashcard () {
     else if (contador === 2) {
         return (
             <div className="cardAberto2">
-                <p>Respostinha</p>
+                <p>JSX é uma sintaxe para escrever HTML dentro do JS</p>
                 <div className="botoes">
-                    <button className="red" onClick={() => { setContador(contador + 1); setColor("red1"); setIcon("close-circle") }}>Não lembrei</button>
-                    <button className="orange" onClick={() => { setContador(contador + 1); setColor("orange1"); setIcon("help-circle") }}>Quase não lembrei</button>
-                    <button className="green" onClick={() => { setContador(contador + 1); setColor("green1"); setIcon("checkmark-circle") }}>Zap!</button>
+                    <button className="red"    onClick={()=>{setContador(contador+1); setColor("red1");    setIcon("close-circle")     }}>Não lembrei      </button>
+                    <button className="orange" onClick={()=>{setContador(contador+1); setColor("orange1"); setIcon("help-circle")      }}>Quase não lembrei</button>
+                    <button className="green"  onClick={()=>{setContador(contador+1); setColor("green1");  setIcon("checkmark-circle") }}>Zap!             </button>
                 </div>
             </div>
         )
