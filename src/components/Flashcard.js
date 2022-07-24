@@ -1,16 +1,16 @@
 import React from 'react';
 import turn from '../assets/images/setinha.svg';
 
-export default function Flashcard () {
+export default function Flashcard ({numPergunta, pergunta, resposta}) {
     
     const [contador, setContador] = React.useState(0);
     const [icon, setIcon] = React.useState('');
-    const [color, setColor] = React.useState('');
+    const [corTexto, setCorTexto] = React.useState('');
 
     if (contador === 0) {
         return (
             <div className="cardFechado">
-                <p>Pergunta 1</p>
+                <p>Pergunta {numPergunta}</p>
                 <ion-icon name="play-outline" onClick={()=>setContador(contador+1)}></ion-icon>
             </div>
         )
@@ -19,7 +19,7 @@ export default function Flashcard () {
     else if (contador === 1) {
         return (
             <div className="cardAberto">
-                <p>O que é JSX?</p>
+                <p>{pergunta}</p>
                 <img className="turn" src={turn} onClick={()=>setContador(contador+1)}/>
             </div>
         )
@@ -28,11 +28,11 @@ export default function Flashcard () {
     else if (contador === 2) {
         return (
             <div className="cardAberto2">
-                <p>JSX é uma sintaxe para escrever HTML dentro do JS</p>
+                <p>{resposta}</p>
                 <div className="botoes">
-                    <button className="red"    onClick={()=>{setContador(contador+1); setColor("red1");    setIcon("close-circle")     }}>Não lembrei      </button>
-                    <button className="orange" onClick={()=>{setContador(contador+1); setColor("orange1"); setIcon("help-circle")      }}>Quase não lembrei</button>
-                    <button className="green"  onClick={()=>{setContador(contador+1); setColor("green1");  setIcon("checkmark-circle") }}>Zap!             </button>
+                    <button className="naoLembrei"    onClick={()=>{setContador(contador+1); setCorTexto("textoVermelho"); setIcon("close-circle")     }}> Não lembrei       </button>
+                    <button className="quaseLembrei"  onClick={()=>{setContador(contador+1); setCorTexto("textoLaranja");  setIcon("help-circle")      }}> Quase não lembrei </button>
+                    <button className="Lembrei"       onClick={()=>{setContador(contador+1); setCorTexto("textoVerde");    setIcon("checkmark-circle") }}> Zap!              </button>
                 </div>
             </div>
         )
@@ -40,7 +40,7 @@ export default function Flashcard () {
     
     else {
         return (
-            <div className={`cardFechado2 ${color}`}>
+            <div className={`cardConcluido ${corTexto}`}>
                 <p>Pergunta 1</p>
                 <ion-icon name={icon}></ion-icon>
             </div>  

@@ -1,5 +1,6 @@
 import React from 'react';
-import logo from '../assets/images/logo.svg'
+import logo from '../assets/images/logo.svg';
+import { deckArray } from './Deck';
 import Flashcard from './Flashcard';
 
 export default function TelaFlashcards() {
@@ -12,14 +13,9 @@ export default function TelaFlashcards() {
                 </div>
 
                 <div className="cards">
-                    <Flashcard />
-                    <Flashcard />
-                    <Flashcard />
-                    <Flashcard />
-                    <Flashcard />
-                    <Flashcard />
-                    <Flashcard />
+                {deckArray.map((card, index) => 
+                    <Flashcard key={index} numPergunta={index+1} pergunta={card.pergunta} resposta={card.resposta} />)}
                 </div>
         </div>
     )
-}
+} 

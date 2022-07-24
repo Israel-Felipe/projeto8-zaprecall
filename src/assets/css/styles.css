@@ -47,12 +47,12 @@ h1 { /* titulo ZapRecall */
 }
 
 /* ------------------------------------ TELA FLASHCARDS */
-.telaFlashcards, .cabecalho, .cards, .cardFechado, .cardAberto, .cardAberto2 {
+.telaFlashcards, .cabecalho, .cards, .cardFechado, .cardAberto, .cardAberto2, .cardConcluido {
   display: flex;
   align-items: center;
 }
 
-.cards, .cardFechado, .cardAberto, .cardAberto2, .botoes {
+.cards, .cardFechado, .cardAberto, .cardAberto2, .botoes, .cabecalho, .cardConcluido {
   justify-content: space-between;
 }
 .telaFlashcards {
@@ -62,7 +62,6 @@ h1 { /* titulo ZapRecall */
 }
 
 .cabecalho {
-  justify-content: space-between;
   width: 245px;
   margin: 40px 0 50px 0;
 }
@@ -77,22 +76,21 @@ h1 { /* titulo ZapRecall */
 
 .cards {
   flex-direction: column;
-  width: 88%;
+  width: 80%;
   gap: 25px;
 }
 
-.cardFechado, .cardAberto, .cardAberto2 {
+.cardFechado, .cardAberto, .cardAberto2, .cardConcluido {
   width: 100%;
   box-shadow: 0px 4px 5px rgba(0, 0, 0, 0.15);
   border-radius: 5px;
   padding: 15px;
   font-size: 16px;
 }
-.cardFechado {
+.cardFechado, .cardConcluido {
   background-color: #FFFFFF; 
   height: 65px;  
   font-weight: 700;
-  
 }
 
 .cardAberto, .cardAberto2 {
@@ -117,64 +115,46 @@ h1 { /* titulo ZapRecall */
 .botoes {
   width: 100%;
   display: flex;
-  gap: 7px;
+  gap: 10px;
 }
 
 .botoes button {
-  color: #FFFFFF;
-  font-family: 'Recursive', sans-serif;
-  font-size: 12px;
   width: 33%;
+  min-height: 37px;
+  color: #FFFFFF;
+  font-size: 12px;
   border: none;
   border-radius: 5px;
   padding: 3px;
 }
 
-
-.red {
+.naoLembrei {
   background-color: #FF3030;
 }
-
-.orange {
+.quaseLembrei {
   background-color: #FF922E;
 }
-
-.green {
+.Lembrei {
   background-color: #2FBE34;
+}
+
+.textoVermelho {
+  color: #FF3030;
+  text-decoration: line-through;
+}
+.textoLaranja {
+  color: #FF922E;
+  text-decoration: line-through;
+}
+.textoVerde {
+  color: #2FBE34;
+  text-decoration: line-through;
 }
 
 .cardAberto ion-icon,
 .cardAberto2 ion-icon,
 .cardFechado ion-icon,
-.cardFechado2 ion-icon {
+.cardConcluido ion-icon {
   font-size: 28px;
 }
 
-.cardFechado2 {
-  background-color: #FFFFFF;
-  width: 100%;
-  height: 65px;
-  box-shadow: 0px 4px 5px rgba(0, 0, 0, 0.15);
-  border-radius: 5px;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  padding: 15px;
-  font-weight: 700;
-  font-size: 16px;
-}
-
-.green1 {
-  color: #2FBE34;
-  text-decoration: line-through;
-}
-
-.red1 {
-  color: #FF3030;
-  text-decoration: line-through;
-}
-
-.orange1 {
-  color: #FF922E;
-  text-decoration: line-through;
-}
