@@ -1,10 +1,12 @@
 import { deckArray } from './Deck';
+import Resultado from './Resultado';
 
 export default function Footer ({cardsCheck, seqCheck}) {
     const tamDeck = deckArray.length;
-    
+
+function Checks () {
     return (
-        <div className='footer'>
+    <div className='footer'>
             <p>{cardsCheck}/{tamDeck} CONCLUÍDOS</p>
 
             <div className='sequenciaCheck'>
@@ -13,5 +15,13 @@ export default function Footer ({cardsCheck, seqCheck}) {
                 )}
             </div> 
         </div>
+    )
+}
+
+    if (cardsCheck === tamDeck) {
+        return <><Resultado seqCheck={seqCheck}/> <Checks /></>
+    }
+    return (
+      <Checks />  
     )
 }

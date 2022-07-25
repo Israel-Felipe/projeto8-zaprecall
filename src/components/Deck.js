@@ -1,4 +1,4 @@
-export const deckArray = [{
+export const deckArray = [/* {
     pergunta: "O que é JSX?",
     resposta: "Uma extensão de linguagem do JavaScript"
     }, {
@@ -16,7 +16,7 @@ export const deckArray = [{
     }, {
     pergunta: "Usamos o npm para __",
     resposta: "gerenciar os pacotes necessários e suas dependências"
-    }, {
+    }, */ {
     pergunta: "Usamos props para __",
     resposta: "passar diferentes informações para componentes"
     }, {

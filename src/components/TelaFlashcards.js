@@ -4,6 +4,7 @@ import { deckArray } from './Deck';
 import Flashcard from './Flashcard';
 import Footer from './Footer';
 
+
 export default function TelaFlashcards() {
     const [cardsCheck, setCardsCheck] = React.useState(0);
     const [seqCheck, setSeqCheck] = React.useState([]);
