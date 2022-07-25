@@ -7,8 +7,7 @@ export default function Flashcard ({numPergunta, pergunta, resposta, cardsCheck,
     const [icon, setIcon] = React.useState('');
     const [corTexto, setCorTexto] = React.useState('');
     
-
-    if (contador === 0) {
+     if (contador === 0) {
         return (
             <div className="cardFechado">
                 <p>Flashcard {numPergunta}</p>
@@ -32,8 +31,8 @@ export default function Flashcard ({numPergunta, pergunta, resposta, cardsCheck,
                 <p>{resposta}</p>
                 <div className="botoes">
                     <button className="naoLembrei"    onClick={()=>{setContador(contador+1); setCorTexto("vermelho"); setIcon("close-circle");     setCardsCheck(cardsCheck+1); setSeqCheck([...seqCheck, {name:"close-circle", cor:"vermelho"}])}}>     Não lembrei       </button>
-                    <button className="quaseLembrei"  onClick={()=>{setContador(contador+1); setCorTexto("laranja");  setIcon("help-circle");      setCardsCheck(cardsCheck+1); setSeqCheck([...seqCheck, {name:"help-circle", cor:"laranja"}])}}>      Quase não lembrei </button>
-                    <button className="Lembrei"       onClick={()=>{setContador(contador+1); setCorTexto("verde");    setIcon("checkmark-circle"); setCardsCheck(cardsCheck+1); setSeqCheck([...seqCheck, {name:"checkmark-circle", cor:"verde"}])}}> Zap!              </button>
+                    <button className="quaseLembrei"  onClick={()=>{setContador(contador+1); setCorTexto("laranja");  setIcon("help-circle");      setCardsCheck(cardsCheck+1); setSeqCheck([...seqCheck, {name:"help-circle", cor:"laranja"}])}}>       Quase não lembrei </button>
+                    <button className="Lembrei"       onClick={()=>{setContador(contador+1); setCorTexto("verde");    setIcon("checkmark-circle"); setCardsCheck(cardsCheck+1); setSeqCheck([...seqCheck, {name:"checkmark-circle", cor:"verde"}])}}>    Zap!              </button>
                 </div>
             </div>
         )

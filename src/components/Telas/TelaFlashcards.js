@@ -5,9 +5,10 @@ import Flashcard from '../Flashcards/Flashcard';
 import Footer from '../Resultado/Footer';
 import MisturaDeck from '../Flashcards/Deck';
 
-export default function TelaFlashcards() {
+export default function TelaFlashcards({iniciar,setIniciar}) {
     const [cardsCheck, setCardsCheck] = React.useState(0);
     const [seqCheck, setSeqCheck] = React.useState([]);
+
     return (
         <div className="telaFlashcards">
                 <div className='topo'>
@@ -17,15 +18,15 @@ export default function TelaFlashcards() {
                         <h1>ZapRecall</h1>
                     </div>
                 </div>
-
-                <div className="cards">
-                {MisturaDeck(deckArray).map((card, index) => 
-                    <Flashcard key={index} 
-                    numPergunta={index+1} pergunta={card.pergunta} resposta={card.resposta}
-                    cardsCheck={cardsCheck} setCardsCheck={setCardsCheck} seqCheck={seqCheck} setSeqCheck={setSeqCheck} />)}
-                </div>
+                    <div className="cards">
+                    {MisturaDeck(deckArray).map((card, index) => 
+                        <Flashcard key={index} 
+                        numPergunta={index+1} pergunta={card.pergunta} resposta={card.resposta}
+                        cardsCheck={cardsCheck} setCardsCheck={setCardsCheck} seqCheck={seqCheck} setSeqCheck={setSeqCheck} />)}
+                    </div>
                 
-                <Footer cardsCheck={cardsCheck} setCardsCheck={setCardsCheck} seqCheck={seqCheck} setSeqCheck={setSeqCheck} />
+                <Footer cardsCheck={cardsCheck} setCardsCheck={setCardsCheck} seqCheck={seqCheck} setSeqCheck={setSeqCheck}
+                iniciar={iniciar} setIniciar={setIniciar}/>
         </div>
     )
 } 

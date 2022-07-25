@@ -1,13 +1,13 @@
 export const deckArray = [{
     pergunta: "O que é JSX?",
     resposta: "Uma extensão de linguagem do JavaScript"
-    }/* , {
+    }, {
     pergunta: "O React é __",
     resposta: "uma biblioteca JavaScript para construção de interfaces"
     }, {
     pergunta: "Componentes devem iniciar com __",
     resposta: "letra maiúscula"
-    }, {
+    }/* , {
     pergunta: "Podemos colocar __ dentro do JSX",
     resposta: "expressões"
     }, {
@@ -24,7 +24,9 @@ export const deckArray = [{
     resposta: "dizer para o React quais informações quando atualizadas devem renderizar a tela novamente"
     } */];
 
+    
     export default function MisturaDeck(deckArray) {
+        
         for (let i = deckArray.length - 1; i > 0; i--) {
             const j = Math.floor(Math.random() * (i + 1));
             [deckArray[i], deckArray[j]] = [deckArray[j], deckArray[i]];

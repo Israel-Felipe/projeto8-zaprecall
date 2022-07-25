@@ -9,7 +9,7 @@ const [iniciar, setIniciar] = React.useState(true);
 
     return (
       <>
-      {iniciar ? <PrimeiraTela iniciar={iniciar} setIniciar={setIniciar}/> : <TelaFlashcards />}
+        {iniciar ? <PrimeiraTela iniciar={iniciar} setIniciar={setIniciar}/> : <TelaFlashcards iniciar={iniciar} setIniciar={setIniciar}/>}
       </>
     )
 }
