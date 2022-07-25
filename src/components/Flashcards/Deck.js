@@ -7,7 +7,7 @@ export const deckArray = [{
     }, {
     pergunta: "Componentes devem iniciar com __",
     resposta: "letra maiúscula"
-    }/* , {
+    } , {
     pergunta: "Podemos colocar __ dentro do JSX",
     resposta: "expressões"
     }, {
@@ -22,7 +22,7 @@ export const deckArray = [{
     }, {
     pergunta: "Usamos estado (state) para __",
     resposta: "dizer para o React quais informações quando atualizadas devem renderizar a tela novamente"
-    } */];
+    }];
 
     
     export default function MisturaDeck(deckArray) {
