@@ -1,18 +1,21 @@
 import React from 'react';
-import logo from '../assets/images/logo.svg';
-import { deckArray } from './Deck';
-import Flashcard from './Flashcard';
-import Footer from './Footer';
-import MisturaDeck from './Deck';
+import logo from '../../assets/images/logo.svg';
+import { deckArray } from '../Flashcards/Deck';
+import Flashcard from '../Flashcards/Flashcard';
+import Footer from '../Resultado/Footer';
+import MisturaDeck from '../Flashcards/Deck';
 
 export default function TelaFlashcards() {
     const [cardsCheck, setCardsCheck] = React.useState(0);
     const [seqCheck, setSeqCheck] = React.useState([]);
     return (
         <div className="telaFlashcards">
-                <div className="cabecalho">
-                    <img className="logo" src={logo} />
-                    <h1>ZapRecall</h1>
+                <div className='topo'>
+                <div className='gradiente'></div>
+                    <div className="cabecalho">
+                        <img className="logo" src={logo} />
+                        <h1>ZapRecall</h1>
+                    </div>
                 </div>
 
                 <div className="cards">

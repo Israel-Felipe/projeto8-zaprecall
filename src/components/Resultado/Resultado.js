@@ -1,6 +1,6 @@
 
-import emojiFeliz from '../assets/images/party.svg';
-import emojiTriste from '../assets/images/sad.svg';
+import emojiFeliz from '../../assets/images/party.svg';
+import emojiTriste from '../../assets/images/sad.svg';
 
 export default function Resultado ({seqCheck}) {
     
@@ -10,7 +10,7 @@ export default function Resultado ({seqCheck}) {
     }
 
 return (
-    <div className='resultado'>
+    <div className='resultado' translate='ue'>
         <div className='emojiTitulo'>
             <img src={(verif) ? emojiFeliz : emojiTriste} />
             <h2>{(verif) ? 'Parabéns!' : 'Putz...'}</h2>

@@ -1,7 +1,7 @@
 export const deckArray = [{
     pergunta: "O que é JSX?",
     resposta: "Uma extensão de linguagem do JavaScript"
-    }, {
+    }/* , {
     pergunta: "O React é __",
     resposta: "uma biblioteca JavaScript para construção de interfaces"
     }, {
@@ -22,7 +22,7 @@ export const deckArray = [{
     }, {
     pergunta: "Usamos estado (state) para __",
     resposta: "dizer para o React quais informações quando atualizadas devem renderizar a tela novamente"
-    }];
+    } */];
 
     export default function MisturaDeck(deckArray) {
         for (let i = deckArray.length - 1; i > 0; i--) {

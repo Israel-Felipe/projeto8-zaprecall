@@ -1,5 +1,5 @@
 import React from 'react';
-import setinha from '../assets/images/setinha.svg';
+import setinha from '../../assets/images/setinha.svg';
 
 export default function Flashcard ({numPergunta, pergunta, resposta, cardsCheck, setCardsCheck, seqCheck, setSeqCheck}) {
     

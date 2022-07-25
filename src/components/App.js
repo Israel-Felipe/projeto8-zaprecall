@@ -1,6 +1,6 @@
 import React from "react";
-import PrimeiraTela from "./PrimeiraTela";
-import TelaFlashcards from "./TelaFlashcards";
+import PrimeiraTela from "./Telas/PrimeiraTela";
+import TelaFlashcards from "./Telas/TelaFlashcards";
 
 
 export default function App() {

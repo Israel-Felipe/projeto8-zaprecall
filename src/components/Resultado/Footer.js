@@ -1,4 +1,4 @@
-import { deckArray } from './Deck';
+import { deckArray } from '../Flashcards/Deck';
 import Resultado from './Resultado';
 
 export default function Footer ({cardsCheck, seqCheck}) {
@@ -17,6 +17,8 @@ function Checks () {
         </div>
     )
 }
+
+
 
     if (cardsCheck === tamDeck) {
         return <><Resultado seqCheck={seqCheck}/> <Checks /></>
