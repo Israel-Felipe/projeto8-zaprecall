@@ -25,7 +25,7 @@ export default function TelaFlashcards() {
                     cardsCheck={cardsCheck} setCardsCheck={setCardsCheck} seqCheck={seqCheck} setSeqCheck={setSeqCheck} />)}
                 </div>
                 
-                <Footer cardsCheck={cardsCheck} seqCheck={seqCheck} />
+                <Footer cardsCheck={cardsCheck} setCardsCheck={setCardsCheck} seqCheck={seqCheck} setSeqCheck={setSeqCheck} />
         </div>
     )
 } 
